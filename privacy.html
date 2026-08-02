@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー / Privacy Policy — PRISM</title>
+<style>
+  :root {
+    --bg: #E6E8E2; --card: #FCFCFA; --ink: #15211F; --ink-soft: #56655F;
+    --ink-faint: #8A968F; --line: #D6D9D1; --teal: #2C6F6B; --teal-bg: #E3EEEB;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E1413; --card: #161D1C; --ink: #E8EDEB; --ink-soft: #9FB0AB;
+      --ink-faint: #6E807B; --line: #242E2C; --teal: #4FA39C; --teal-bg: #16302C;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E1413; --card: #161D1C; --ink: #E8EDEB; --ink-soft: #9FB0AB;
+    --ink-faint: #6E807B; --line: #242E2C; --teal: #4FA39C; --teal-bg: #16302C;
+  }
+  :root[data-theme="light"] {
+    --bg: #E6E8E2; --card: #FCFCFA; --ink: #15211F; --ink-soft: #56655F;
+    --ink-faint: #8A968F; --line: #D6D9D1; --teal: #2C6F6B; --teal-bg: #E3EEEB;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Hiragino Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { padding: 0 20px 100px; }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  a { color: var(--teal); }
+  .back { display: inline-block; margin: 40px 0 20px; font-size: 14px; text-decoration: none; color: var(--ink-soft); }
+  h1 { font-size: 24px; margin: 8px 0 4px; }
+  .updated { color: var(--ink-faint); font-size: 13px; margin: 0 0 32px; }
+  h2 { font-size: 17px; margin: 36px 0 10px; }
+  h3 { font-size: 15px; margin: 20px 0 6px; }
+  p, li { font-size: 14.5px; line-height: 1.75; color: var(--ink-soft); }
+  code {
+    font-family: ui-monospace, "SF Mono", monospace; font-size: 0.9em;
+    background: var(--teal-bg); color: var(--teal); padding: 1px 6px; border-radius: 5px;
+  }
+  .lang-divider {
+    margin: 56px 0 40px; padding-top: 40px; border-top: 1px solid var(--line);
+  }
+  .contact {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px 20px; margin-top: 16px; font-size: 14.5px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./index.html">← PRISM</a>
+
+  <h1>プライバシーポリシー</h1>
+  <p class="updated">最終更新日: 2026-07-10</p>
+
+  <p>このプライバシーポリシーは、iOS/macOSアプリ「PRISM」（以下「本アプリ」）における個人情報・データの取り扱いについて説明するものです。</p>
+
+  <h2>基本方針</h2>
+  <p>本アプリは、開発者が運用するサーバーを一切持ちません。フィード（RSS/Atom/ポッドキャスト）の取得、記事本文の抽出、Google連携によるYouTube登録チャンネルの取り込みは、すべて<strong>ユーザーの端末から直接</strong>、各配信元サーバーやGoogleのAPIサーバーへ通信することで行われます。本アプリの開発者が、ユーザーの利用データを収集・保存・分析することはありません。広告表示・アクセス解析(アナリティクス)・クラッシュレポート等の第三者SDKも組み込んでいません。</p>
+
+  <h2>取得する情報</h2>
+
+  <h3>1. ユーザーが自ら登録するフィード情報</h3>
+  <p>RSS/Atom/ポッドキャストのURLなど、ユーザーが本アプリに追加した購読先の情報。端末内にのみ保存され、外部には送信されません。</p>
+
+  <h3>2. Google連携（任意機能）で取得する情報</h3>
+  <p>本アプリは、ユーザーが「Google連携」機能を能動的に有効にした場合に限り、Googleの OAuth 2.0 認証を通じてユーザー自身のGoogleアカウントにサインインしてもらいます。この際、以下のスコープのみを要求します。</p>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/youtube.readonly</code>（YouTubeアカウントの読み取り専用アクセス）</li>
+  </ul>
+  <p>このスコープを用いて取得するのは、<strong>ユーザーが登録済みのYouTubeチャンネル一覧</strong>（チャンネルID・チャンネル名・サムネイル画像URL）のみです。視聴履歴、コメント、Googleアカウントの個人情報（氏名・メールアドレス・連絡先等）、YouTube以外のGoogleサービスのデータには一切アクセスしません。また、本アプリからYouTube/Googleアカウントの設定を変更したり、コンテンツを投稿・削除したりすることもありません（読み取り専用）。</p>
+  <p>取得したチャンネル一覧は、ユーザーが選択したチャンネルのみ本アプリのフィード購読先として端末内に保存されます。認証トークン（アクセストークン・リフレッシュトークン）は端末のKeychain（iOS/macOSの暗号化されたセキュアストレージ）にのみ保存され、開発者を含む第三者がこれを閲覧・取得することはできません。</p>
+
+  <h3>3. Apple Intelligence機能について</h3>
+  <p>記事要約・キーワード抽出等のAI機能は、Apple Intelligence（端末内で処理されるオンデバイスAI）のみを使用します。記事本文やユーザーデータが外部のクラウドAIサービスへ送信されることはありません。</p>
+
+  <h2>データの共有</h2>
+  <p>本アプリが取得・保存する情報を、開発者を含むいかなる第三者にも販売・提供・共有することはありません。広告目的での利用もありません。</p>
+
+  <h2>データの保持と削除</h2>
+  <ul>
+    <li>Google連携で取得したチャンネル情報は、ユーザーが本アプリの設定からソースを削除する、または本アプリをアンインストールすることでいつでも削除できます。</li>
+    <li>Google連携自体は、本アプリの設定画面から「サインアウト」することでいつでも解除でき、端末に保存された認証トークンは即座に削除されます。</li>
+    <li>Googleアカウント側からも、<a href="https://myaccount.google.com/permissions">Googleアカウントの「サードパーティによるアクセス権」設定</a>からいつでも本アプリのアクセス権を取り消すことができます。</li>
+  </ul>
+
+  <h2>児童のプライバシー</h2>
+  <p>本アプリは13歳未満の児童を対象としたものではなく、児童から意図的に個人情報を収集することはありません。</p>
+
+  <h2>本ポリシーの変更</h2>
+  <p>本ポリシーの内容を変更する場合は、本ページを更新し、更新日を改訂します。</p>
+
+  <h2>お問い合わせ</h2>
+  <div class="contact">本アプリおよび本ポリシーに関するお問い合わせは、以下の連絡先までお願いします。<br><a href="mailto:barbed-store-0t@icloud.com">barbed-store-0t@icloud.com</a></div>
+
+  <div class="lang-divider"></div>
+
+  <h1>Privacy Policy (English)</h1>
+  <p class="updated">Last updated: 2026-07-10</p>
+
+  <p>This Privacy Policy explains how the iOS/macOS app "PRISM" ("the App") handles personal information and data.</p>
+
+  <h2>Overview</h2>
+  <p>The App has no developer-operated backend server. Fetching feeds (RSS/Atom/podcasts), extracting article content, and importing YouTube subscriptions via Google Sign-In all happen through <strong>direct connections from the user's own device</strong> to the relevant feed sources or Google's APIs. The developer does not collect, store, or analyze any usage data. The App contains no advertising, analytics, or crash-reporting third-party SDKs.</p>
+
+  <h2>Information We Access</h2>
+
+  <h3>1. Feeds you add yourself</h3>
+  <p>URLs of RSS/Atom/podcast feeds you add are stored only locally on your device and are never transmitted to the developer.</p>
+
+  <h3>2. Google Sign-In (optional feature)</h3>
+  <p>Only if you actively enable Google linking, the App will ask you to sign in to your own Google Account via OAuth 2.0, requesting exactly this scope:</p>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/youtube.readonly</code> (read-only access to your YouTube account)</li>
+  </ul>
+  <p>This scope is used solely to read the <strong>list of YouTube channels you are already subscribed to</strong> (channel ID, channel title, thumbnail URL) so you can optionally add them as feed sources inside the App. The App does not access watch history, comments, your name/email/other personal profile data, or any other Google service, and it never writes to, modifies, or deletes anything in your YouTube/Google account.</p>
+  <p>Selected channels are stored locally on your device. OAuth tokens (access and refresh tokens) are stored only in the device Keychain (encrypted secure storage on iOS/macOS) and are never accessible to the developer or any third party.</p>
+
+  <h3>3. Apple Intelligence features</h3>
+  <p>Summarization and keyword-extraction features use on-device Apple Intelligence only. Article content and user data are never sent to any external cloud AI service.</p>
+
+  <h2>Data Sharing</h2>
+  <p>We do not sell, share, or provide any data collected or accessed by the App to any third party, including the developer, for any purpose including advertising.</p>
+
+  <h2>Data Retention &amp; Deletion</h2>
+  <ul>
+    <li>Imported channel data can be removed at any time by deleting the source in the App's settings, or by uninstalling the App.</li>
+    <li>You can disconnect Google linking at any time from the App's settings ("Sign out"), which immediately deletes the locally stored tokens.</li>
+    <li>You can also revoke the App's access at any time from <a href="https://myaccount.google.com/permissions">Google Account's Third-Party Access settings</a>.</li>
+  </ul>
+
+  <h2>Children's Privacy</h2>
+  <p>The App is not directed at children under 13 and does not knowingly collect personal information from children.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>If this policy changes, this page will be updated with a new "Last updated" date.</p>
+
+  <h2>Contact</h2>
+  <div class="contact">For questions about the App or this policy, please contact:<br><a href="mailto:barbed-store-0t@icloud.com">barbed-store-0t@icloud.com</a></div>
+</div>
+</body>
+</html>

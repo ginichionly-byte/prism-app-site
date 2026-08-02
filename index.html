@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRISM — ニュース・ポッドキャスト・YouTubeを1か所に</title>
+<meta name="description" content="PRISM は iOS・iPadOS・macOS向けの個人用フィードリーダーです。ニュース、ポッドキャスト、YouTubeを1か所にまとめて読めます。">
+<style>
+  :root {
+    --bg: #E6E8E2;
+    --card: #FCFCFA;
+    --ink: #15211F;
+    --ink-soft: #56655F;
+    --ink-faint: #8A968F;
+    --line: #D6D9D1;
+    --teal: #2C6F6B;
+    --teal-300: #4FA39C;
+    --teal-bg: #E3EEEB;
+    --amber: #DD7733;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E1413;
+      --card: #161D1C;
+      --ink: #E8EDEB;
+      --ink-soft: #9FB0AB;
+      --ink-faint: #6E807B;
+      --line: #242E2C;
+      --teal: #4FA39C;
+      --teal-300: #62B8B0;
+      --teal-bg: #16302C;
+      --amber: #E08742;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E1413; --card: #161D1C; --ink: #E8EDEB; --ink-soft: #9FB0AB;
+    --ink-faint: #6E807B; --line: #242E2C; --teal: #4FA39C; --teal-300: #62B8B0;
+    --teal-bg: #16302C; --amber: #E08742;
+  }
+  :root[data-theme="light"] {
+    --bg: #E6E8E2; --card: #FCFCFA; --ink: #15211F; --ink-soft: #56655F;
+    --ink-faint: #8A968F; --line: #D6D9D1; --teal: #2C6F6B; --teal-300: #4FA39C;
+    --teal-bg: #E3EEEB; --amber: #DD7733;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Hiragino Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { padding: 0 20px 80px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+
+  header { display: flex; align-items: center; gap: 14px; padding: 56px 0 28px; }
+  .mark {
+    width: 56px; height: 56px; border-radius: 16px; flex: none;
+    background: linear-gradient(135deg, var(--teal-300), var(--amber));
+    display: flex; align-items: center; justify-content: center;
+    font-family: ui-serif, Georgia, serif; font-weight: 700; font-size: 26px; color: #fff;
+  }
+  h1 { font-size: 26px; margin: 0; letter-spacing: -0.01em; }
+  .tagline { color: var(--ink-soft); font-size: 15px; margin: 4px 0 0; }
+
+  .lede { font-size: 17px; line-height: 1.7; color: var(--ink-soft); max-width: 56ch; margin: 0 0 40px; }
+
+  .features { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 48px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 18px 20px;
+  }
+  .card .icon { font-size: 20px; margin-bottom: 8px; display: block; }
+  .card h3 { font-size: 15px; margin: 0 0 4px; }
+  .card p { font-size: 13.5px; color: var(--ink-soft); margin: 0; line-height: 1.6; }
+
+  .platforms {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 48px;
+  }
+  .pill {
+    font-size: 12.5px; font-weight: 600; padding: 6px 14px; border-radius: 999px;
+    background: var(--teal-bg); color: var(--teal);
+  }
+
+  .links { display: flex; flex-direction: column; gap: 10px; margin-bottom: 40px; }
+  .links a {
+    color: var(--teal); text-decoration: none; font-size: 15px; font-weight: 500;
+  }
+  .links a:hover { text-decoration: underline; }
+
+  footer {
+    border-top: 1px solid var(--line); padding-top: 20px; margin-top: 40px;
+    font-size: 12.5px; color: var(--ink-faint);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark">P</div>
+    <div>
+      <h1>PRISM</h1>
+      <p class="tagline">ニュース・ポッドキャスト・YouTubeを1か所に</p>
+    </div>
+  </header>
+
+  <p class="lede">
+    PRISM は iOS・iPadOS・macOS 向けの個人用フィードリーダーです。
+    RSS/Atomニュース、ポッドキャスト、YouTubeチャンネルを1つの画面にまとめ、
+    端末内だけで動く仕組みで読みやすく整理します。
+  </p>
+
+  <div class="features">
+    <div class="card">
+      <span class="icon">📰</span>
+      <h3>まとめて読む</h3>
+      <p>ニュース・ポッドキャスト・動画を種別を問わず1つのフィードで購読できます。</p>
+    </div>
+    <div class="card">
+      <span class="icon">🔒</span>
+      <h3>サーバーを持たない設計</h3>
+      <p>開発者が運用するバックエンドは存在せず、端末から直接それぞれの配信元へアクセスします。</p>
+    </div>
+    <div class="card">
+      <span class="icon">✨</span>
+      <h3>端末内のApple Intelligence</h3>
+      <p>要約やキーワード抽出は端末内処理のみ。記事本文が外部クラウドへ送信されることはありません。</p>
+    </div>
+  </div>
+
+  <div class="platforms">
+    <span class="pill">iPhone</span>
+    <span class="pill">iPad</span>
+    <span class="pill">Mac</span>
+  </div>
+
+  <div class="links">
+    <a href="./privacy.html">プライバシーポリシー / Privacy Policy →</a>
+  </div>
+
+  <footer>
+    &copy; 2026 PRISM. All rights reserved.
+  </footer>
+</div>
+</body>
+</html>
