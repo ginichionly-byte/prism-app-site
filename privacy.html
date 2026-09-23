@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>プライバシーポリシー / Privacy Policy — PRISM</title>
+<title>プライバシーポリシー / Privacy Policy — Prism</title>
 <style>
   :root {
     --bg: #E6E8E2; --card: #FCFCFA; --ink: #15211F; --ink-soft: #56655F;
@@ -53,93 +53,69 @@
 </head>
 <body>
 <div class="wrap">
-  <a class="back" href="./index.html">← PRISM</a>
-
+  <a class="back" href="./index.html">← Prism</a>
   <h1>プライバシーポリシー</h1>
-  <p class="updated">最終更新日: 2026-07-10</p>
-
-  <p>このプライバシーポリシーは、iOS/macOSアプリ「PRISM」（以下「本アプリ」）における個人情報・データの取り扱いについて説明するものです。</p>
-
+  <p class="updated">最終更新日: 2026-09-22（V2.0）</p>
+  <p>このプライバシーポリシーは、iOS/macOSアプリ「Prism」（以下「本アプリ」）における個人情報・データの取り扱いについて説明するものです。</p>
   <h2>基本方針</h2>
-  <p>本アプリは、開発者が運用するサーバーを一切持ちません。フィード（RSS/Atom/ポッドキャスト）の取得、記事本文の抽出、Google連携によるYouTube登録チャンネルの取り込みは、すべて<strong>ユーザーの端末から直接</strong>、各配信元サーバーやGoogleのAPIサーバーへ通信することで行われます。本アプリの開発者が、ユーザーの利用データを収集・保存・分析することはありません。広告表示・アクセス解析(アナリティクス)・クラッシュレポート等の第三者SDKも組み込んでいません。</p>
-
+  <p>本アプリは、開発者が運用するサーバーを一切持ちません。フィード（RSS/Atom/ポッドキャスト）の取得と記事本文の抽出は、すべて<strong>ユーザーの端末から直接</strong>、各配信元のサーバーへ通信することで行われます。本アプリの開発者が、ユーザーの利用データを収集・保存・分析することはありません。広告表示・アクセス解析(アナリティクス)・クラッシュレポート等の第三者SDKも組み込んでいません。</p>
   <h2>取得する情報</h2>
-
   <h3>1. ユーザーが自ら登録するフィード情報</h3>
-  <p>RSS/Atom/ポッドキャストのURLなど、ユーザーが本アプリに追加した購読先の情報。端末内にのみ保存され、外部には送信されません。</p>
-
-  <h3>2. Google連携（任意機能）で取得する情報</h3>
-  <p>本アプリは、ユーザーが「Google連携」機能を能動的に有効にした場合に限り、Googleの OAuth 2.0 認証を通じてユーザー自身のGoogleアカウントにサインインしてもらいます。この際、以下のスコープのみを要求します。</p>
+  <p>RSS/Atom/ポッドキャストのURLなど、ユーザーが本アプリに追加した購読先の情報。端末内にのみ保存され(<code>~/Library/Application Support/PrismV2/store.json</code> 相当のアプリ専用領域)、外部には送信されません。</p>
+  <h3>2. AI機能について</h3>
+  <p><strong>本バージョン（2.0）では、AI機能の処理はすべて端末の中（Apple Intelligence）で行います。</strong> 記事本文や質問が端末の外へ送られることはありません。対象は、利用者が押して使う機能（記事のAI要約・キーワード抽出・やさしく言い換え・読み比べ・保存記事への質問）と、自動で動く機能（今日のダイジェスト・いま話題・カテゴリの提案・記事本文の判定）の両方です。</p>
+  <p>将来のバージョンでは、利用者が押して使うAI機能に限り、処理先として <strong>Apple Private Cloud Compute</strong> を「設定 → AI」で選べるようにする予定です。選べるようになった場合でも既定は端末内のままで、選んだときだけ記事本文や質問がAppleのサーバーへ送られます（Appleの設計上、送った内容は処理のためだけに使われ、Appleにも開発者にも保存されません）。自動で動くAI機能は、その場合も常に端末内で処理します。このページは、実際に選べるようになった時点で更新します。</p>
+  <h3>3. 翻訳・文字起こしについて</h3>
   <ul>
-    <li><code>https://www.googleapis.com/auth/youtube.readonly</code>（YouTubeアカウントの読み取り専用アクセス）</li>
+    <li><strong>翻訳</strong>: 外国語の記事を日本語にする機能は、Appleの翻訳（Translation framework）を使い、<strong>端末の中だけ</strong>で処理します。記事本文が外部へ送られることはありません。</li>
+    <li><strong>文字起こし</strong>: ダウンロードしたポッドキャストの文字起こしは、Appleの音声認識（SpeechAnalyzer）を使い、<strong>端末の中だけ</strong>で処理します。音声が外部のサーバーへ送られることはありません。初回のみ、認識に使う言語データをAppleからダウンロードします。</li>
   </ul>
-  <p>このスコープを用いて取得するのは、<strong>ユーザーが登録済みのYouTubeチャンネル一覧</strong>（チャンネルID・チャンネル名・サムネイル画像URL）のみです。視聴履歴、コメント、Googleアカウントの個人情報（氏名・メールアドレス・連絡先等）、YouTube以外のGoogleサービスのデータには一切アクセスしません。また、本アプリからYouTube/Googleアカウントの設定を変更したり、コンテンツを投稿・削除したりすることもありません（読み取り専用）。</p>
-  <p>取得したチャンネル一覧は、ユーザーが選択したチャンネルのみ本アプリのフィード購読先として端末内に保存されます。認証トークン（アクセストークン・リフレッシュトークン）は端末のKeychain（iOS/macOSの暗号化されたセキュアストレージ）にのみ保存され、開発者を含む第三者がこれを閲覧・取得することはできません。</p>
-
-  <h3>3. Apple Intelligence機能について</h3>
-  <p>記事要約・キーワード抽出等のAI機能は、Apple Intelligence（端末内で処理されるオンデバイスAI）のみを使用します。記事本文やユーザーデータが外部のクラウドAIサービスへ送信されることはありません。</p>
-
+  <h3>4. 共有メニューから受け取る情報</h3>
+  <p>他のアプリの共有メニューから「Prismに保存」「Prismで購読」を選んだ場合、そのページのURLと題名を端末内の受け渡し場所（App Group）へ一時的に置き、アプリが次に開いたときに取り込んで削除します。外部へは送信しません。</p>
   <h2>データの共有</h2>
   <p>本アプリが取得・保存する情報を、開発者を含むいかなる第三者にも販売・提供・共有することはありません。広告目的での利用もありません。</p>
-
   <h2>データの保持と削除</h2>
   <ul>
-    <li>Google連携で取得したチャンネル情報は、ユーザーが本アプリの設定からソースを削除する、または本アプリをアンインストールすることでいつでも削除できます。</li>
-    <li>Google連携自体は、本アプリの設定画面から「サインアウト」することでいつでも解除でき、端末に保存された認証トークンは即座に削除されます。</li>
-    <li>Googleアカウント側からも、<a href="https://myaccount.google.com/permissions">Googleアカウントの「サードパーティによるアクセス権」設定</a>からいつでも本アプリのアクセス権を取り消すことができます。</li>
+    <li>購読リスト・既読状態・保存記事・ダウンロードした音声・文字起こしは、すべて端末内にのみ保存されます。設定からソースやダウンロードを削除する、または本アプリをアンインストールすることでいつでも削除できます。</li>
+    <li>V2.0でGoogle連携（YouTube登録チャンネルの取り込み）は廃止しました。以前のバージョンで保存されていた認証トークンは、V2.0へ更新した際に端末から削除されます。</li>
   </ul>
-
   <h2>児童のプライバシー</h2>
   <p>本アプリは13歳未満の児童を対象としたものではなく、児童から意図的に個人情報を収集することはありません。</p>
-
   <h2>本ポリシーの変更</h2>
   <p>本ポリシーの内容を変更する場合は、本ページを更新し、更新日を改訂します。</p>
-
   <h2>お問い合わせ</h2>
   <div class="contact">本アプリおよび本ポリシーに関するお問い合わせは、以下の連絡先までお願いします。<br><a href="mailto:barbed-store-0t@icloud.com">barbed-store-0t@icloud.com</a></div>
-
+  <p>---</p>
   <div class="lang-divider"></div>
-
   <h1>Privacy Policy (English)</h1>
-  <p class="updated">Last updated: 2026-07-10</p>
-
-  <p>This Privacy Policy explains how the iOS/macOS app "PRISM" ("the App") handles personal information and data.</p>
-
+  <p class="updated">Last updated: 2026-09-22 (V2.0)</p>
+  <p>This Privacy Policy explains how the iOS/macOS app "Prism" ("the App") handles personal information and data.</p>
   <h2>Overview</h2>
-  <p>The App has no developer-operated backend server. Fetching feeds (RSS/Atom/podcasts), extracting article content, and importing YouTube subscriptions via Google Sign-In all happen through <strong>direct connections from the user's own device</strong> to the relevant feed sources or Google's APIs. The developer does not collect, store, or analyze any usage data. The App contains no advertising, analytics, or crash-reporting third-party SDKs.</p>
-
+  <p>The App has no developer-operated backend server. Fetching feeds (RSS/Atom/podcasts) and extracting article content happen through <strong>direct connections from the user's own device</strong> to the relevant feed sources. The developer does not collect, store, or analyze any usage data. The App contains no advertising, analytics, or crash-reporting third-party SDKs.</p>
   <h2>Information We Access</h2>
-
   <h3>1. Feeds you add yourself</h3>
   <p>URLs of RSS/Atom/podcast feeds you add are stored only locally on your device and are never transmitted to the developer.</p>
-
-  <h3>2. Google Sign-In (optional feature)</h3>
-  <p>Only if you actively enable Google linking, the App will ask you to sign in to your own Google Account via OAuth 2.0, requesting exactly this scope:</p>
+  <h3>2. AI features</h3>
+  <p><strong>In this version (2.0), all AI features are processed on-device (Apple Intelligence).</strong> Article text and questions never leave your device. This covers both the features you trigger yourself (article summary, keyword extraction, plain-language rewrite, coverage comparison, questions about saved articles) and the ones that run automatically (daily digest, trending topics, category suggestions, article-body detection).</p>
+  <p>A future version plans to let you choose <strong>Apple Private Cloud Compute</strong> in Settings → AI for the features you trigger yourself. Even then the default stays on-device, and article text or your question would be sent to Apple's servers only when you choose it (by design, it is used only to process the request and is not retained by Apple or the developer). Automatic AI features would remain on-device. This page will be updated when that option becomes available.</p>
+  <h3>3. Translation &amp; transcription</h3>
   <ul>
-    <li><code>https://www.googleapis.com/auth/youtube.readonly</code> (read-only access to your YouTube account)</li>
+    <li><strong>Translation</strong>: translating foreign-language articles into your language uses Apple's Translation framework and runs <strong>entirely on your device</strong>. Article text is never sent anywhere.</li>
+    <li><strong>Transcription</strong>: transcribing downloaded podcast episodes uses Apple's on-device speech recognition (SpeechAnalyzer). Audio never leaves your device. Only the language model itself is downloaded from Apple the first time.</li>
   </ul>
-  <p>This scope is used solely to read the <strong>list of YouTube channels you are already subscribed to</strong> (channel ID, channel title, thumbnail URL) so you can optionally add them as feed sources inside the App. The App does not access watch history, comments, your name/email/other personal profile data, or any other Google service, and it never writes to, modifies, or deletes anything in your YouTube/Google account.</p>
-  <p>Selected channels are stored locally on your device. OAuth tokens (access and refresh tokens) are stored only in the device Keychain (encrypted secure storage on iOS/macOS) and are never accessible to the developer or any third party.</p>
-
-  <h3>3. Apple Intelligence features</h3>
-  <p>Summarization and keyword-extraction features use on-device Apple Intelligence only. Article content and user data are never sent to any external cloud AI service.</p>
-
+  <h3>4. Content received from the share sheet</h3>
+  <p>When you choose "Save to Prism" or "Subscribe in Prism" from another app's share sheet, the page URL and title are placed in an on-device App Group container, then imported and removed the next time the App opens. Nothing is sent externally.</p>
   <h2>Data Sharing</h2>
   <p>We do not sell, share, or provide any data collected or accessed by the App to any third party, including the developer, for any purpose including advertising.</p>
-
   <h2>Data Retention &amp; Deletion</h2>
   <ul>
-    <li>Imported channel data can be removed at any time by deleting the source in the App's settings, or by uninstalling the App.</li>
-    <li>You can disconnect Google linking at any time from the App's settings ("Sign out"), which immediately deletes the locally stored tokens.</li>
-    <li>You can also revoke the App's access at any time from <a href="https://myaccount.google.com/permissions">Google Account's Third-Party Access settings</a>.</li>
+    <li>Subscriptions, read state, saved articles, downloaded audio and transcripts are stored only on your device. Remove them at any time from the App's settings, or by uninstalling the App.</li>
+    <li>Google linking (importing YouTube subscriptions) was removed in V2.0. Any tokens stored by earlier versions are deleted when you update to V2.0.</li>
   </ul>
-
   <h2>Children's Privacy</h2>
   <p>The App is not directed at children under 13 and does not knowingly collect personal information from children.</p>
-
   <h2>Changes to This Policy</h2>
   <p>If this policy changes, this page will be updated with a new "Last updated" date.</p>
-
   <h2>Contact</h2>
   <div class="contact">For questions about the App or this policy, please contact:<br><a href="mailto:barbed-store-0t@icloud.com">barbed-store-0t@icloud.com</a></div>
 </div>
