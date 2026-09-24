@@ -63,6 +63,19 @@
 
   .lede { font-size: 17px; line-height: 1.7; color: var(--ink-soft); max-width: 56ch; margin: 0 0 40px; }
 
+  /* セールのお知らせ。終わったらこの枠ごと消す(価格が戻った後に残すと、事実と違う価格の表示になる)。 */
+  .sale {
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--amber);
+    border-radius: 14px; padding: 18px 20px; margin: 0 0 32px;
+  }
+  .sale .label { font-size: 13px; font-weight: 700; color: var(--amber); margin: 0 0 6px; letter-spacing: 0.02em; }
+  .sale p { font-size: 15px; line-height: 1.7; margin: 0 0 12px; }
+  .sale a {
+    display: inline-block; font-size: 14px; font-weight: 600; text-decoration: none;
+    color: #fff; background: var(--teal); padding: 8px 16px; border-radius: 999px;
+  }
+  .sale a:hover { opacity: 0.9; }
+
   .features { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 48px; }
   .card {
     background: var(--card); border: 1px solid var(--line); border-radius: 14px;
@@ -101,6 +114,12 @@
       <p class="tagline">ニュースとポッドキャストを、時間で読む</p>
     </div>
   </header>
+
+  <section class="sale" aria-label="価格のお知らせ">
+    <p class="label">開発応援価格 100円</p>
+    <p>Prism V2は機能を増やし続けている最中です。開発が一段落するまでは100円でお届けします。</p>
+    <a href="https://apps.apple.com/jp/app/prism-v2/id6797107978">App Storeで見る →</a>
+  </section>
 
   <p class="lede">
     Prism V2 は iPhone・iPad・Mac 向けの個人用フィードリーダーです。
