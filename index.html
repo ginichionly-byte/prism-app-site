@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PRISM — ニュース・ポッドキャスト・YouTubeを1か所に</title>
-<meta name="description" content="PRISM は iOS・iPadOS・macOS向けの個人用フィードリーダーです。ニュース、ポッドキャスト、YouTubeを1か所にまとめて読めます。">
+<title>Prism V2 — ニュースとポッドキャストを、時間で読む</title>
+<meta name="description" content="Prism V2 は iPhone・iPad・Mac向けの個人用フィードリーダーです。ニュースとポッドキャストを1つのタイムラインにまとめて読めます(Mac版はYouTubeも)。">
 <style>
   :root {
     --bg: #E6E8E2;
@@ -63,6 +63,19 @@
 
   .lede { font-size: 17px; line-height: 1.7; color: var(--ink-soft); max-width: 56ch; margin: 0 0 40px; }
 
+  /* セールのお知らせ。終わったらこの枠ごと消す(価格が戻った後に残すと、事実と違う価格の表示になる)。 */
+  .sale {
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--amber);
+    border-radius: 14px; padding: 18px 20px; margin: 0 0 32px;
+  }
+  .sale .label { font-size: 13px; font-weight: 700; color: var(--amber); margin: 0 0 6px; letter-spacing: 0.02em; }
+  .sale p { font-size: 15px; line-height: 1.7; margin: 0 0 12px; }
+  .sale a {
+    display: inline-block; font-size: 14px; font-weight: 600; text-decoration: none;
+    color: #fff; background: var(--teal); padding: 8px 16px; border-radius: 999px;
+  }
+  .sale a:hover { opacity: 0.9; }
+
   .features { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 48px; }
   .card {
     background: var(--card); border: 1px solid var(--line); border-radius: 14px;
@@ -97,22 +110,28 @@
   <header>
     <div class="mark">P</div>
     <div>
-      <h1>PRISM</h1>
-      <p class="tagline">ニュース・ポッドキャスト・YouTubeを1か所に</p>
+      <h1>Prism V2</h1>
+      <p class="tagline">ニュースとポッドキャストを、時間で読む</p>
     </div>
   </header>
 
+  <section class="sale" aria-label="価格のお知らせ">
+    <p class="label">開発応援価格 100円</p>
+    <p>Prism V2は機能を増やし続けている最中です。開発が一段落するまでは100円でお届けします。</p>
+    <a href="https://apps.apple.com/jp/app/prism-v2/id6797107978">App Storeで見る →</a>
+  </section>
+
   <p class="lede">
-    PRISM は iOS・iPadOS・macOS 向けの個人用フィードリーダーです。
-    RSS/Atomニュース、ポッドキャスト、YouTubeチャンネルを1つの画面にまとめ、
-    端末内だけで動く仕組みで読みやすく整理します。
+    Prism V2 は iPhone・iPad・Mac 向けの個人用フィードリーダーです。
+    RSS/Atomのニュースとポッドキャストを1つのタイムラインにまとめ、
+    端末内だけで動く仕組みで読みやすく整理します。Mac版では、YouTubeも専用のウインドウで見られます。
   </p>
 
   <div class="features">
     <div class="card">
       <span class="icon">📰</span>
       <h3>まとめて読む</h3>
-      <p>ニュース・ポッドキャスト・動画を種別を問わず1つのフィードで購読できます。</p>
+      <p>ニュースとポッドキャストを、種別を問わず1つのフィードで購読できます(Mac版はYouTubeも)。</p>
     </div>
     <div class="card">
       <span class="icon">🔒</span>
@@ -137,7 +156,7 @@
   </div>
 
   <footer>
-    &copy; 2026 PRISM. All rights reserved.
+    &copy; 2026 Prism V2. All rights reserved.
   </footer>
 </div>
 </body>
