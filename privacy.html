@@ -55,92 +55,105 @@
 <div class="wrap">
   <a class="back" href="./index.html">← Prism</a>
   <h1>Prism プライバシーポリシー</h1>
-  <p class="updated">最終更新日: 2026-10-04（V2.2）</p>
-  <p>このプライバシーポリシーは、iOS/macOSアプリ「Prism」（以下「本アプリ」）における個人情報・データの取り扱いについて説明するものです。</p>
-  <h2>基本方針</h2>
-  <p>本アプリは、開発者が運用するサーバーを一切持ちません。フィード（RSS/Atom/ポッドキャスト）の取得と記事本文の抽出は、すべて<strong>ユーザーの端末から直接</strong>、各配信元のサーバーへ通信することで行われます。本アプリの開発者が、ユーザーの利用データを収集・保存・分析することはありません。端末間の同期（V2.2以降）は、ユーザー自身のiCloudを使い、開発者のサーバーを経由しません。広告表示・アクセス解析(アナリティクス)・クラッシュレポート等の第三者SDKも組み込んでいません。</p>
-  <h2>取得する情報</h2>
-  <h3>1. ユーザーが自ら登録するフィード情報</h3>
-  <p>RSS/Atom/ポッドキャストのURLなど、ユーザーが本アプリに追加した購読先の情報。端末内のアプリ専用領域に保存され、開発者には送信されません。iCloud同期をオンにしている場合は、次項のとおりユーザー自身のiCloudにも保存されます。</p>
-  <h3>2. iCloud同期について（V2.2以降）</h3>
-  <p>iCloud同期をオンにすると、同じApple Accountの端末どうしで次の情報をそろえるため、<strong>ユーザー自身のiCloudの非公開データベース</strong>（AppleのCloudKit）に保存します。</p>
-  <ul>
-    <li>購読（ソース）・カテゴリ・フォルダ・スマートフィルタ・関心・ミュート/ブースト/通知の語、見た目などの設定（ダウンロード・音・AIの設定は端末ごと）</li>
-    <li>既読と、読んだ・聴いた記録</li>
-    <li>保存した記事（題名・URL・要旨など）と、それに付けたタグ・メモ</li>
-    <li>ハイライト、再生位置、読んだ位置、聴き終えた回・消した回の印</li>
-  </ul>
-  <p>この領域はユーザーのiCloudの容量を使い、Appleのプライバシーポリシーに従って管理されます。<strong>開発者はこの領域を読むことも、受け取ることもできません。</strong> アカウントの登録は不要です。ダウンロードした音声・文字起こし・検索用の索引などは同期せず、各端末の中にだけ置きます。</p>
-  <p>同期は「設定 → iCloud同期」でいつでもオフにできます（既定はオン）。オフにしても端末内のデータは消えません。iCloudに保存された同期のデータを消すには、すべての端末で同期をオフにしてから、iOS/iPadOSの「設定 → [ユーザー名] → iCloud → アカウントのストレージを管理」、またはmacOSの「システム設定 → [ユーザー名] → iCloud → 管理」で本アプリのデータを削除してください（同期がオンの端末が残っていると、その端末のデータが送り直されます）。</p>
-  <h3>3. AI機能について</h3>
-  <p><strong>現在のバージョン（2.2）では、AI機能の処理はすべて端末の中（Apple Intelligence）で行います。</strong> 記事本文や質問が端末の外へ送られることはありません。対象は、利用者が押して使う機能（記事のAI要約・キーワード抽出・やさしく言い換え・読み比べ・検索結果の要約）と、自動で動く機能（今日のダイジェスト・いま話題・カテゴリの提案・記事本文の判定）の両方です。</p>
-  <p>将来のバージョンでは、利用者が押して使うAI機能に限り、処理先として <strong>Apple Private Cloud Compute</strong> を「設定 → AI」で選べるようにする予定です。選べるようになった場合でも既定は端末内のままで、選んだときだけ記事本文や質問がAppleのサーバーへ送られます（Appleの設計上、送った内容は処理のためだけに使われ、Appleにも開発者にも保存されません）。自動で動くAI機能は、その場合も常に端末内で処理します。このページは、実際に選べるようになった時点で更新します。</p>
-  <h3>4. 翻訳・文字起こしについて</h3>
-  <ul>
-    <li><strong>翻訳</strong>: 外国語の記事を日本語にする機能は、Appleの翻訳（Translation framework）を使い、<strong>端末の中だけ</strong>で処理します。記事本文が外部へ送られることはありません。</li>
-    <li><strong>文字起こし</strong>: ダウンロードしたポッドキャストの文字起こしは、Appleの音声認識（SpeechAnalyzer）を使い、<strong>端末の中だけ</strong>で処理します。音声が外部のサーバーへ送られることはありません。初回のみ、認識に使う言語データをAppleからダウンロードします。</li>
-  </ul>
-  <h3>5. 共有メニューから受け取る情報</h3>
-  <p>他のアプリの共有メニューから「Prismに保存」「Prismで購読」を選んだ場合、そのページのURLと題名を端末内の受け渡し場所（App Group）へ一時的に置き、アプリが次に開いたときに取り込んで削除します。外部へは送信しません。</p>
-  <h2>データの共有</h2>
-  <p>本アプリが取得・保存する情報を、開発者を含むいかなる第三者にも販売・提供・共有することはありません。広告目的での利用もありません。</p>
-  <h2>データの保持と削除</h2>
-  <ul>
-    <li>購読リスト・既読状態・保存記事・ダウンロードした音声・文字起こしは端末内に保存されます。設定からソースやダウンロードを削除する、または本アプリをアンインストールすることでいつでも削除できます。</li>
-    <li>iCloud同期をオンにしている場合、同期の対象（上記「iCloud同期について」）はユーザーのiCloudにも保存されます。端末で削除した項目は、中身がiCloudからも削除され、ほかの端末にも反映されます（削除をほかの端末へ伝えるための印として、記事などの識別子だけがiCloudに残ります）。iCloud上のデータは上記の手順でまとめて削除できます。</li>
-    <li>iCloud同期がオンの端末でバックアップを復元すると、復元した内容はiCloudのデータとまとめられます（iCloudにある項目は消えず、同じ項目はiCloudの内容が優先されます）。</li>
-    <li>V2.0でGoogle連携（YouTube登録チャンネルの取り込み）は廃止しました。以前のバージョンで保存されていた認証トークンは、V2.0へ更新した際に端末から削除されます。</li>
-  </ul>
-  <h2>児童のプライバシー</h2>
-  <p>本アプリは13歳未満の児童を対象としたものではなく、児童から意図的に個人情報を収集することはありません。</p>
-  <h2>本ポリシーの変更</h2>
-  <p>本ポリシーの内容を変更する場合は、本ページを更新し、更新日を改訂します。</p>
-  <h2>お問い合わせ</h2>
-  <div class="contact">本アプリおよび本ポリシーに関するお問い合わせは、以下の連絡先までお願いします。<br><a href="mailto:barbed-store-0t@icloud.com">barbed-store-0t@icloud.com</a></div>
-  <div class="lang-divider"></div>
-  <h1>Prism Privacy Policy (English)</h1>
-  <p class="updated">Last updated: 2026-10-04 (V2.2)</p>
-  <p>This Privacy Policy explains how the iOS/macOS app "Prism" ("the App") handles personal information and data.</p>
-  <h2>Overview</h2>
-  <p>The App has no developer-operated backend server. Fetching feeds (RSS/Atom/podcasts) and extracting article content happen through <strong>direct connections from the user's own device</strong> to the relevant feed sources. The developer does not collect, store, or analyze any usage data. Sync between devices (V2.2 and later) uses your own iCloud and never passes through a developer server. The App contains no advertising, analytics, or crash-reporting third-party SDKs.</p>
-  <h2>Information We Access</h2>
-  <h3>1. Feeds you add yourself</h3>
-  <p>URLs of RSS/Atom/podcast feeds you add are stored in the App's private storage on your device and are never transmitted to the developer. If iCloud sync is on, they are also stored in your own iCloud as described below.</p>
-  <h3>2. iCloud sync (V2.2 and later)</h3>
-  <p>When iCloud sync is on, the App stores the following in <strong>the private database of your own iCloud</strong> (Apple CloudKit) so that devices signed in to the same Apple Account stay in sync:</p>
-  <ul>
-    <li>Subscriptions (sources), categories, folders, smart filters, interests, mute/boost/alert words, and appearance settings (download, sound and AI settings stay on each device)</li>
-    <li>Read state and your reading/listening history</li>
-    <li>Saved articles (title, URL, summary snippet, etc.) and the tags and notes you add</li>
-    <li>Highlights, playback positions, reading positions, and marks for finished or dismissed episodes</li>
-  </ul>
-  <p>This data uses your iCloud storage and is handled under Apple's privacy policy. <strong>The developer cannot read or receive it.</strong> No account registration is required. Downloaded audio, transcripts, and search indexes are not synced and stay on each device.</p>
-  <p>You can turn sync off at any time in Settings → iCloud同期 (iCloud Sync); it is on by default. Turning it off does not delete data on your device. To delete the synced data stored in iCloud, first turn sync off on every device, then delete the App's data in Settings → [your name] → iCloud → Manage Account Storage on iOS/iPadOS, or System Settings → [your name] → iCloud → Manage on macOS (a device that still has sync on will upload its data again).</p>
-  <h3>3. AI features</h3>
-  <p><strong>In the current version (2.2), all AI features are processed on-device (Apple Intelligence).</strong> Article text and questions never leave your device. This covers both the features you trigger yourself (article summary, keyword extraction, plain-language rewrite, coverage comparison, search-result summaries) and the ones that run automatically (daily digest, trending topics, category suggestions, article-body detection).</p>
-  <p>A future version plans to let you choose <strong>Apple Private Cloud Compute</strong> in Settings → AI for the features you trigger yourself. Even then the default stays on-device, and article text or your question would be sent to Apple's servers only when you choose it (by design, it is used only to process the request and is not retained by Apple or the developer). Automatic AI features would remain on-device. This page will be updated when that option becomes available.</p>
-  <h3>4. Translation &amp; transcription</h3>
-  <ul>
-    <li><strong>Translation</strong>: translating foreign-language articles into your language uses Apple's Translation framework and runs <strong>entirely on your device</strong>. Article text is never sent anywhere.</li>
-    <li><strong>Transcription</strong>: transcribing downloaded podcast episodes uses Apple's on-device speech recognition (SpeechAnalyzer). Audio never leaves your device. Only the language model itself is downloaded from Apple the first time.</li>
-  </ul>
-  <h3>5. Content received from the share sheet</h3>
-  <p>When you choose "Save to Prism" or "Subscribe in Prism" from another app's share sheet, the page URL and title are placed in an on-device App Group container, then imported and removed the next time the App opens. Nothing is sent externally.</p>
-  <h2>Data Sharing</h2>
-  <p>We do not sell, share, or provide any data collected or accessed by the App to any third party, including the developer, for any purpose including advertising.</p>
-  <h2>Data Retention &amp; Deletion</h2>
-  <ul>
-    <li>Subscriptions, read state, saved articles, downloaded audio and transcripts are stored on your device. Remove them at any time from the App's settings, or by uninstalling the App.</li>
-    <li>If iCloud sync is on, the synced items (see "iCloud sync" above) are also stored in your iCloud. When you delete an item on a device, its content is deleted from iCloud and from your other devices (only a marker with the item's identifier remains in iCloud so that the deletion reaches your other devices). You can delete all of the App's iCloud data with the steps above.</li>
-    <li>If you restore a backup on a device with iCloud sync on, the restored content is merged with your iCloud data (items in iCloud are not deleted, and iCloud's version wins for the same item).</li>
-    <li>Google linking (importing YouTube subscriptions) was removed in V2.0. Any tokens stored by earlier versions are deleted when you update to V2.0.</li>
-  </ul>
-  <h2>Children's Privacy</h2>
-  <p>The App is not directed at children under 13 and does not knowingly collect personal information from children.</p>
-  <h2>Changes to This Policy</h2>
-  <p>If this policy changes, this page will be updated with a new "Last updated" date.</p>
-  <h2>Contact</h2>
-  <div class="contact">For questions about the App or this policy, please contact:<br><a href="mailto:barbed-store-0t@icloud.com">barbed-store-0t@icloud.com</a></div>
+<p>最終更新日: 2026-10-12（V3.0）</p>
+<p>このプライバシーポリシーは、iOS/macOSアプリ「Prism」（以下「本アプリ」）における個人情報・データの取り扱いについて説明するものです。</p>
+<h2>基本方針</h2>
+<p>本アプリは、開発者が運用するサーバーを一切持ちません。フィード（RSS/Atom/ポッドキャスト）の取得と記事本文の抽出は、すべて<strong>ユーザーの端末から直接</strong>、各配信元のサーバーへ通信することで行われます。本アプリの開発者が、ユーザーの利用データを収集・保存・分析することはありません。端末間の同期（V2.2以降）は、ユーザー自身のiCloudを使い、開発者のサーバーを経由しません。広告表示・アクセス解析(アナリティクス)・クラッシュレポート等の第三者SDKも組み込んでいません。</p>
+<h2>取得する情報</h2>
+<h3>1. ユーザーが自ら登録するフィード情報</h3>
+<p>RSS/Atom/ポッドキャストのURLなど、ユーザーが本アプリに追加した購読先の情報。端末内のアプリ専用領域に保存され、開発者には送信されません。iCloud同期をオンにしている場合は、次項のとおりユーザー自身のiCloudにも保存されます。</p>
+<h3>2. iCloud同期について（V2.2以降）</h3>
+<p>iCloud同期をオンにすると、同じApple Accountの端末どうしで次の情報をそろえるため、<strong>ユーザー自身のiCloudの非公開データベース</strong>（AppleのCloudKit）に保存します。</p>
+<ul>
+<li>購読（ソース）・カテゴリ・フォルダ・スマートフィルタ・関心・ミュート/ブースト/通知の語、見た目などの設定（ダウンロード・音・AIの設定は端末ごと）</li>
+<li>既読と、読んだ・聴いた記録</li>
+<li>保存した記事（題名・URL・要旨など）と、それに付けたタグ・メモ</li>
+<li>ハイライト、再生位置、読んだ位置、聴き終えた回・消した回の印</li>
+<li>フォローした名前・種類・通知の入切・見た記事の識別子、履歴の削除を端末間で伝えるための印</li>
+</ul>
+<p>この領域はユーザーのiCloudの容量を使い、Appleのプライバシーポリシーに従って管理されます。<strong>開発者はこの領域を読むことも、受け取ることもできません。</strong> アカウントの登録は不要です。ダウンロードした音声・文字起こし・検索用の索引などは同期せず、各端末の中にだけ置きます。</p>
+<p>同期は「設定 → iCloud同期」でいつでもオフにできます（既定はオン）。オフにしても端末内のデータは消えません。iCloudに保存された同期のデータを消すには、すべての端末で同期をオフにしてから、iOS/iPadOSの「設定 → [ユーザー名] → iCloud → アカウントのストレージを管理」、またはmacOSの「システム設定 → [ユーザー名] → iCloud → 管理」で本アプリのデータを削除してください（同期がオンの端末が残っていると、その端末のデータが送り直されます）。</p>
+<h3>3. AI機能について</h3>
+<p><strong>現在のバージョン（3.0）では、AI機能の処理はすべて端末の中（Apple Intelligenceおよび同梱の本文抽出モデル）で行います。</strong> 記事本文や質問が端末の外へ送られることはありません。対象は、利用者が押して使う機能（記事のAI要約・キーワード抽出・やさしく言い換え・読み比べ・検索結果の要約）と、自動で動く機能（今日のダイジェスト・いま話題・カテゴリの提案・記事本文の判定・読み上げ原稿・ひとこと要約）の両方です。自然文フィルタ案やMacの字幕の要点も端末内で作り、利用者が確認して使います。自動のひとこと要約のAI処理は充電中に限り、回数と時間に上限を設けます。</p>
+<p>将来のバージョンでは、利用者が押して使うAI機能に限り、処理先として <strong>Apple Private Cloud Compute</strong> を「設定 → AI」で選べるようにする予定です。選べるようになった場合でも既定は端末内のままで、選んだときだけ記事本文や質問がAppleのサーバーへ送られます（Appleの設計上、送った内容は処理のためだけに使われ、Appleにも開発者にも保存されません）。自動で動くAI機能は、その場合も常に端末内で処理します。このページは、実際に選べるようになった時点で更新します。</p>
+<h3>4. 翻訳・文字起こしについて</h3>
+<ul>
+<li><strong>翻訳</strong>: 外国語の記事を日本語にする機能は、Appleの翻訳（Translation framework）を使い、<strong>端末の中だけ</strong>で処理します。記事本文が外部へ送られることはありません。</li>
+<li><strong>文字起こし</strong>: ダウンロードしたポッドキャストの文字起こしは、Appleの音声認識（SpeechAnalyzer）を使い、<strong>端末の中だけ</strong>で処理します。音声が外部のサーバーへ送られることはありません。初回のみ、認識に使う言語データをAppleからダウンロードします。</li>
+</ul>
+<h3>5. 共有メニューから受け取る情報</h3>
+<p>他のアプリの共有メニューから「Prismに保存」「Prismで購読」を選んだ場合、そのページのURLと題名を端末内の受け渡し場所（App Group）へ一時的に置き、アプリが次に開いたときに取り込んで削除します。外部へは送信しません。</p>
+<h3>6. Obsidianへの書き出し（V3.0）</h3>
+<p>利用者が書き出しを有効にして選んだフォルダに、保存記事・URL・保存理由・タグ・ハイライト・文字起こしからの引用・日々のノートをMarkdownで書きます。Prismが管理する区切りとプロパティだけを更新します。手編集した本文は保持し、管理プロパティは更新します。所有者不明・競合・クラウド未取得を検知した場合は書き込みを保留します。二重作成や意図しない再作成を避け、タグ名の変更を端末間で扱うため、<code>Prism/.prism/</code>に識別子・作成/削除・改名の記録も保存します。</p>
+<p>書き出し先にiCloud DriveやObsidian Syncなどの同期フォルダを選んだ場合、そのサービスがファイルを同期します。これは利用者自身が選んだ保存先の動作であり、開発者への送信ではありません。書き出しをオフにしても、すでに作ったノートは残ります。</p>
+<h3>7. Widget・Siri・Spotlight（V3.0）</h3>
+<p>Widget表示用の題名・ソース・未読件数などを端末内のApp Groupへ置きます。ロック画面への表示はOSのプライバシー設定に従います。記事・番組・ソース・フォローの題名と識別子を端末の検索用に索引し、Siri/ショートカットから選んだ項目を開けるようにします。開発者のサーバーや広告サービスへは送信しません。</p>
+<h2>データの共有</h2>
+<p>本アプリが取得・保存する情報を、開発者を含むいかなる第三者にも販売・提供・共有することはありません。広告目的での利用もありません。</p>
+<h2>データの保持と削除</h2>
+<ul>
+<li>購読リスト・既読状態・保存記事・ダウンロードした音声・文字起こしは端末内に保存されます。設定からソースやダウンロードを削除する、または本アプリをアンインストールすることでいつでも削除できます。</li>
+<li>iCloud同期をオンにしている場合、同期の対象（上記「iCloud同期について」）はユーザーのiCloudにも保存されます。端末で削除した項目は、中身がiCloudからも削除され、ほかの端末にも反映されます（削除をほかの端末へ伝えるための印として、記事などの識別子だけがiCloudに残ります）。iCloud上のデータは上記の手順でまとめて削除できます。</li>
+<li>iCloud同期がオンの端末でバックアップを復元すると、復元した内容はiCloudのデータとまとめられます（iCloudにある項目は消えず、同じ項目はiCloudの内容が優先されます）。</li>
+<li>V2.0でGoogle連携（YouTube登録チャンネルの取り込み）は廃止しました。以前のバージョンで保存されていた認証トークンは、V2.0へ更新した際に端末から削除されます。</li>
+</ul>
+<h2>児童のプライバシー</h2>
+<p>本アプリは13歳未満の児童を対象としたものではなく、児童から意図的に個人情報を収集することはありません。</p>
+<h2>本ポリシーの変更</h2>
+<p>本ポリシーの内容を変更する場合は、本ページを更新し、更新日を改訂します。</p>
+<h2>お問い合わせ</h2>
+<p>本アプリおよび本ポリシーに関するお問い合わせは、以下の連絡先までお願いします。</p>
+<p><a href="mailto:barbed-store-0t@icloud.com">barbed-store-0t@icloud.com</a></p>
+<div class="lang-divider"></div>
+<h1>Prism Privacy Policy (English)</h1>
+<p>Last updated: 2026-10-12 (V3.0)</p>
+<p>This Privacy Policy explains how the iOS/macOS app &quot;Prism&quot; (&quot;the App&quot;) handles personal information and data.</p>
+<h2>Overview</h2>
+<p>The App has no developer-operated backend server. Fetching feeds (RSS/Atom/podcasts) and extracting article content happen through <strong>direct connections from the user&#x27;s own device</strong> to the relevant feed sources. The developer does not collect, store, or analyze any usage data. Sync between devices (V2.2 and later) uses your own iCloud and never passes through a developer server. The App contains no advertising, analytics, or crash-reporting third-party SDKs.</p>
+<h2>Information We Access</h2>
+<h3>1. Feeds you add yourself</h3>
+<p>URLs of RSS/Atom/podcast feeds you add are stored in the App&#x27;s private storage on your device and are never transmitted to the developer. If iCloud sync is on, they are also stored in your own iCloud as described below.</p>
+<h3>2. iCloud sync (V2.2 and later)</h3>
+<p>When iCloud sync is on, the App stores the following in <strong>the private database of your own iCloud</strong> (Apple CloudKit) so that devices signed in to the same Apple Account stay in sync:</p>
+<ul>
+<li>Subscriptions (sources), categories, folders, smart filters, interests, mute/boost/alert words, and appearance settings (download, sound and AI settings stay on each device)</li>
+<li>Read state, reading/listening history, history-removal intent, and followed names/types with notification preferences and viewed-article identifiers</li>
+<li>Saved articles (title, URL, summary snippet, etc.) and the tags and notes you add</li>
+<li>Highlights, playback positions, reading positions, and marks for finished or dismissed episodes</li>
+</ul>
+<p>This data uses your iCloud storage and is handled under Apple&#x27;s privacy policy. <strong>The developer cannot read or receive it.</strong> No account registration is required. Downloaded audio, transcripts, and search indexes are not synced and stay on each device.</p>
+<p>You can turn sync off at any time in Settings → iCloud同期 (iCloud Sync); it is on by default. Turning it off does not delete data on your device. To delete the synced data stored in iCloud, first turn sync off on every device, then delete the App&#x27;s data in Settings → [your name] → iCloud → Manage Account Storage on iOS/iPadOS, or System Settings → [your name] → iCloud → Manage on macOS (a device that still has sync on will upload its data again).</p>
+<h3>3. AI features</h3>
+<p><strong>In the current version (3.0), all AI features are processed on-device (Apple Intelligence and the bundled article-extraction model).</strong> Article text and questions never leave your device. This covers both the features you trigger yourself (article summary, keyword extraction, plain-language rewrite, coverage comparison, search-result summaries) and the ones that run automatically (daily digest, trending topics, category suggestions, article-body detection, faithful spoken-text preparation and short card summaries). Natural-language filter drafts and Mac caption key points are also generated on-device for you to review. Automatic AI card summaries run only while charging, with limits on duration and frequency.</p>
+<p>A future version plans to let you choose <strong>Apple Private Cloud Compute</strong> in Settings → AI for the features you trigger yourself. Even then the default stays on-device, and article text or your question would be sent to Apple&#x27;s servers only when you choose it (by design, it is used only to process the request and is not retained by Apple or the developer). Automatic AI features would remain on-device. This page will be updated when that option becomes available.</p>
+<h3>4. Translation &amp; transcription</h3>
+<ul>
+<li><strong>Translation</strong>: translating foreign-language articles into your language uses Apple&#x27;s Translation framework and runs <strong>entirely on your device</strong>. Article text is never sent anywhere.</li>
+<li><strong>Transcription</strong>: transcribing downloaded podcast episodes uses Apple&#x27;s on-device speech recognition (SpeechAnalyzer). Audio never leaves your device. Only the language model itself is downloaded from Apple the first time.</li>
+</ul>
+<h3>5. Content received from the share sheet</h3>
+<p>When you choose &quot;Save to Prism&quot; or &quot;Subscribe in Prism&quot; from another app&#x27;s share sheet, the page URL and title are placed in an on-device App Group container, then imported and removed the next time the App opens. Nothing is sent externally.</p>
+<h3>6. Obsidian export (V3.0)</h3>
+<p>When you enable export and select a folder, the App writes saved articles, URLs, save reasons, tags, highlights, transcript excerpts and daily notes as Markdown. It updates only its managed regions and properties. It preserves manually edited note bodies while keeping its managed properties up to date; writes are held when ownership is unknown or files have conflicts or are unavailable locally. Records in <code>Prism/.prism/</code> contain identifiers and creation, deletion and tag-rename information to prevent duplicate or unintended recreation across devices.</p>
+<p>If you select an iCloud Drive, Obsidian Sync or another synced folder, that service synchronizes the files under your own configuration. The developer does not receive them. Turning export off leaves existing notes in place.</p>
+<h3>7. Widgets, Siri and Spotlight (V3.0)</h3>
+<p>Bounded widget snapshots with titles, sources and unread counts stay in an on-device App Group. Lock Screen visibility follows the operating system&#x27;s privacy settings. Titles and stable identifiers for articles, episodes, sources and follows are indexed for device search and explicit Siri/Shortcut navigation. They are not sent to a developer backend or an advertising service.</p>
+<h2>Data Sharing</h2>
+<p>We do not sell, share, or provide any data collected or accessed by the App to any third party, including the developer, for any purpose including advertising.</p>
+<h2>Data Retention &amp; Deletion</h2>
+<ul>
+<li>Subscriptions, read state, saved articles, downloaded audio and transcripts are stored on your device. Remove them at any time from the App&#x27;s settings, or by uninstalling the App.</li>
+<li>If iCloud sync is on, the synced items (see &quot;iCloud sync&quot; above) are also stored in your iCloud. When you delete an item on a device, its content is deleted from iCloud and from your other devices (only a marker with the item&#x27;s identifier remains in iCloud so that the deletion reaches your other devices). You can delete all of the App&#x27;s iCloud data with the steps above.</li>
+<li>If you restore a backup on a device with iCloud sync on, the restored content is merged with your iCloud data (items in iCloud are not deleted, and iCloud&#x27;s version wins for the same item).</li>
+<li>Google linking (importing YouTube subscriptions) was removed in V2.0. Any tokens stored by earlier versions are deleted when you update to V2.0.</li>
+</ul>
+<h2>Children&#x27;s Privacy</h2>
+<p>The App is not directed at children under 13 and does not knowingly collect personal information from children.</p>
+<h2>Changes to This Policy</h2>
+<p>If this policy changes, this page will be updated with a new &quot;Last updated&quot; date.</p>
+<h2>Contact</h2>
+<p>For questions about the App or this policy, please contact:</p>
+<p><a href="mailto:barbed-store-0t@icloud.com">barbed-store-0t@icloud.com</a></p>
 </div>
 </body>
 </html>
